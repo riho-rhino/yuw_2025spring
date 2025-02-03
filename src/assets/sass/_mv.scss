@@ -1,3 +1,46 @@
 @use './_reset';
 @use './_mixin' as *;
 @use './_common' as c;
+
+.header{
+    // height: 100dvh;
+    width: 100%;
+    position: relative;
+    h1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: calc(180 / c.$spw) * 100%;
+        margin-left: calc(56 / c.$spw) * 100%;
+        line-height: 1;
+        font-size: calc(40.14 / c.$spw * 100vw);
+    }
+    h2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: calc(232.35 / c.$spw) * 100%;
+        margin-left: calc(52 / c.$spw) * 100%;
+        line-height: 1;
+        font-size: calc(24.08 / c.$spw * 100vw);
+    }
+}
+
+.lead{
+    margin-top: calc(89 / c.$spw) * 100%;
+    margin-left: calc(110.58 / c.$spw) * 100%;
+    .description{
+        line-height: 1;
+        font-size: calc(35 / c.$spw * 100vw);
+    }
+    .ja_lead{
+        margin-top: calc(41 / c.$spw) * 100%;
+        line-height: calc(40 / 27);
+        font-size: calc(27 / c.$spw * 100vw);
+    }
+    .en_lead{
+        font-size: calc(20.91 / c.$spw * 100vw);
+        line-height: calc(35.1 / 26.57);
+        margin-top: calc(26.57 / c.$spw) * 100%;
+    }
+}

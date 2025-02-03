@@ -285,4 +285,400 @@ ol, ul, li {
 a {
   text-decoration: none;
 }
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.pc {
+  display: none;
+}
+
+.sp {
+  display: block;
+}
+
+@media screen and (min-width: 769px) {
+  .pc {
+    display: block;
+  }
+  .sp {
+    display: none;
+  }
+}
+.en_e {
+  font-family: montserrat, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.en_l {
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ja {
+  font-family: zen-kaku-gothic-antique, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+}
+.header h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 24%;
+  margin-left: 7.4666666667%;
+  line-height: 1;
+  font-size: 5.352vw;
+}
+.header h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 30.98%;
+  margin-left: 6.9333333333%;
+  line-height: 1;
+  font-size: 3.2106666667vw;
+}
+
+.lead {
+  margin-top: 11.8666666667%;
+  margin-left: 14.744%;
+}
+.lead .description {
+  line-height: 1;
+  font-size: 4.6666666667vw;
+}
+.lead .ja_lead {
+  margin-top: 5.4666666667%;
+  line-height: 1.4814814815;
+  font-size: 3.6vw;
+}
+.lead .en_lead {
+  font-size: 2.788vw;
+  line-height: 1.3210387655;
+  margin-top: 3.5426666667%;
+}
+
+.sec {
+  position: relative;
+  width: 100%;
+}
+.sec .num {
+  top: 0;
+  left: 0;
+  font-size: 4.6666666667vw;
+  line-height: 1;
+  padding-top: 10%;
+  margin-left: 10.2666666667%;
+  z-index: 40;
+}
+.sec .look_ph {
+  line-height: 0;
+}
+.sec .item_detail {
+  margin-top: 6.44%;
+  margin-left: 6.7013333333%;
+}
+.sec .item_detail p a {
+  color: #000;
+  font-size: 4.2666666667vw;
+  line-height: 1.71875;
+}
+.sec .item_detail .shopnow {
+  padding-top: 4.6666666667%;
+  font-size: 4.4vw;
+  line-height: 1;
+}
+.sec .item_detail .shopnow span {
+  display: block;
+  padding-bottom: 1.6%;
+  -webkit-text-decoration: underline wavy #FF56D2 1px;
+          text-decoration: underline wavy #FF56D2 1px;
+  text-underline-offset: 4px;
+}
+
+.sec_1 {
+  margin-top: 21.4%;
+}
+.sec_1 .look_ph {
+  position: sticky;
+  top: 30px;
+}
+.sec_1 .look1-1 {
+  margin: 0 auto;
+  width: 70.4%;
+}
+.sec_1 .look1-2 {
+  width: 100%;
+  z-index: 20;
+}
+.sec_1 .look1-3 {
+  width: 100%;
+  z-index: 30;
+}
+
+.sec_2 {
+  margin-top: 13.9333333333%;
+}
+.sec_2 .look_ph {
+  position: sticky;
+  top: 0;
+}
+.sec_2 .look2-1 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sec_3 {
+  margin-top: 13.9333333333%;
+}
+.sec_3 .num {
+  position: absolute;
+}
+.sec_3 .look3-1 {
+  width: 100%;
+  margin: 0 auto;
+}
+.sec_3 .look3-2 {
+  width: 70.4%;
+  margin: 4% 0 0 auto;
+}
+
+.sec_4 {
+  margin-top: 14.6666666667%;
+}
+.sec_4 .look_ph {
+  position: sticky;
+  top: 0;
+}
+.sec_4 .look4-1 {
+  width: 100%;
+  margin: 0 auto;
+}
+.sec_4 .look4-2 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sec_5 {
+  margin-top: 16.6666666667%;
+}
+.sec_5 .look_ph {
+  position: sticky;
+  top: 0;
+}
+.sec_5 .num {
+  position: absolute;
+}
+.sec_5 .look5-1 {
+  width: 100%;
+}
+.sec_5 .look5-2 {
+  margin: 0 auto;
+}
+
+.sec_6 {
+  margin-top: 18.8%;
+}
+.sec_6 .num {
+  position: absolute;
+}
+.sec_6 .look_ph {
+  width: 76%;
+  margin: 0 auto;
+}
+.sec_6 .look6-2 {
+  padding-top: 1.3333333333%;
+}
+
+.sec_7 {
+  margin-top: 16.5333333333%;
+}
+.sec_7 .num {
+  position: absolute;
+}
+.sec_7 .look_ph {
+  position: sticky;
+  top: 0;
+}
+
+.sec_8 {
+  margin-top: 17.3333333333%;
+}
+.sec_8 .num {
+  position: absolute;
+}
+
+.sec_9 {
+  margin-top: 15.7333333333%;
+}
+.sec_9 .look_ph {
+  position: sticky;
+  top: 0;
+}
+
+.caption {
+  font-size: 2.6666666667vw;
+  display: block;
+  line-height: 1;
+}
+
+.footer {
+  margin-top: 16.5333333333%;
+}
+
+.movie_wrap {
+  overflow: hidden;
+}
+
+.loop_txt {
+  width: 100%;
+  margin: auto 0 0;
+  font-size: 40px;
+  line-height: 1em;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  color: #000;
+  line-height: 1;
+}
+.loop_txt div {
+  animation: txt-left 10s infinite linear 1s both;
+}
+.loop_txt.border {
+  font-size: 5.0666666667vw;
+}
+.loop_txt.yuw {
+  font-size: 4.4vw;
+}
+
+.footer_movie {
+  width: 60%;
+  margin: 3.2% auto;
+}
+
+@keyframes txt-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.allitem a {
+  position: relative;
+  display: block;
+  width: 54.2533333333%;
+  margin: 11.2666666667% auto 0;
+  border-radius: 30px;
+  border: solid 1px #000;
+  line-height: 1;
+  padding: 5.192% 0;
+  font-size: 4.3493333333vw;
+  text-align: center;
+  color: #000;
+}
+.allitem a::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: solid 1px #000;
+  border-right: solid 1px #000;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  margin-right: 6.4666666667%;
+}
+.allitem a .arrow {
+  position: absolute;
+  width: 7.1934136151%;
+  top: 50%;
+  right: 0;
+  margin-right: 6.4666666667%;
+  height: 1px;
+  background: #000;
+}
+
+.link {
+  font-size: 3.6vw;
+  text-align: center;
+  -webkit-text-decoration: underline wavy #FF56D2 1px;
+          text-decoration: underline wavy #FF56D2 1px;
+  text-underline-offset: 4px;
+}
+.link a {
+  color: #000;
+}
+
+.insta {
+  margin-top: 12%;
+}
+
+.official {
+  margin-top: 6.8906666667%;
+}
+
+.footer_img {
+  width: 100%;
+  position: relative;
+  line-height: 0;
+  margin-top: 14.8666666667%;
+}
+.footer_img .footer_logo {
+  line-height: 0;
+  width: 16.1333333333%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8.88% 6.384% 0 0;
+}
+.footer_img .staff {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3.0933333333vw;
+  line-height: 1;
+  margin-top: 69.2866666667%;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+.footer_img .credit {
+  mix-blend-mode: difference;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 1.55;
+  margin-bottom: 16.6053333333%;
+  margin-left: 22.2666666667%;
+  font-size: 3.0666666667vw;
+  color: #fff;
+}
+.footer_img .copyright {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  margin-bottom: 4.8453333333%;
+  font-size: 3.3333333333vw;
+  white-space: nowrap;
+  color: #fff;
+  mix-blend-mode: difference;
+}
 /*# sourceMappingURL=style.css.map */

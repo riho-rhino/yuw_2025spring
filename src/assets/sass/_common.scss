@@ -1,2 +1,48 @@
 @use './_reset';
 @use './_mixin' as *;
+
+
+$spw : 750;
+$pcw : 2732;
+$main: 1342;
+
+body{
+    font-family: montserrat, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.pc{
+    display: none;
+}
+.sp{
+    display: block;
+}
+
+@include pc{
+    .pc{
+        display: block;
+    }
+    .sp{
+        display: none;
+    } 
+}
+
+.en_e{
+    font-family: montserrat, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.en_l{
+    font-family: montserrat, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ja{
+    font-family: zen-kaku-gothic-antique, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
