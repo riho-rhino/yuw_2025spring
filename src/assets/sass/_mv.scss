@@ -2,10 +2,24 @@
 @use './_mixin' as *;
 @use './_common' as c;
 
+body{
+    &.start{
+        .spyuw_logo{
+            animation: oplogo 1.5s ease forwards;
+        }
+        h1,h2{
+            opacity: 1;
+        }
+        .hamburger_menu{
+            opacity: 1;
+        }
+    }
+}
+
 .header{
-    // height: 100dvh;
     width: 100%;
     position: relative;
+
     h1{
         position: absolute;
         top: 0;
@@ -14,6 +28,12 @@
         margin-left: calc(56 / c.$spw) * 100%;
         line-height: 1;
         font-size: calc(40.14 / c.$spw * 100vw);
+        opacity: 0;
+        transition:opacity 1s 1.5s ease-in;
+        @include pc{
+            font-size: min(calc(55 / c.$pcw * 100vw),22.5px);
+            transition:opacity 1s 1s ease-in;
+        }
     }
     h2{
         position: absolute;
@@ -23,24 +43,77 @@
         margin-left: calc(52 / c.$spw) * 100%;
         line-height: 1;
         font-size: calc(24.08 / c.$spw * 100vw);
+        opacity: 0;
+        transition:opacity 1s 1.5s ease-in;
+        @include pc{
+            font-size: min(calc(33 / c.$pcw * 100vw),16.5px);
+            transition:opacity 1s 1s ease-in;
+        }
+    }
+
+    .spyuw_logo{
+        position: absolute;
+        width: calc(190 / c.$spw) * 100%;
+        top: 0;
+        left: 0;
+        margin: calc(50 / c.$spw) * 100% 0 0 calc(90 / c.$spw) * 100%;
+        opacity: 0;
+        @include pc{
+            display: none;
+        }
     }
 }
 
-.lead{
+
+
+@keyframes oplogo {
+    0%{
+        opacity: 0;
+    }
+    40%,80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+.lead_wrap{
     margin-top: calc(89 / c.$spw) * 100%;
     margin-left: calc(110.58 / c.$spw) * 100%;
+    display: block;
+    @include pc{
+        display: flex;
+        vertical-align: top;
+        align-items: first baseline;
+        gap: calc(207 / c.$main) * 100%;
+        justify-content: center;
+        margin-left:0;
+        margin-top: calc(103 / c.$main) * 100%;
+    }
     .description{
         line-height: 1;
         font-size: calc(35 / c.$spw * 100vw);
+        @include pc{
+            font-size: min(calc(40 / c.$pcw * 100vw),20px);
+        }
     }
     .ja_lead{
         margin-top: calc(41 / c.$spw) * 100%;
         line-height: calc(40 / 27);
         font-size: calc(27 / c.$spw * 100vw);
+        @include pc{
+            font-size: min(calc(27 / c.$pcw * 100vw),13.5px);
+        }
     }
     .en_lead{
         font-size: calc(20.91 / c.$spw * 100vw);
         line-height: calc(35.1 / 26.57);
         margin-top: calc(26.57 / c.$spw) * 100%;
+        @include pc{
+            font-size: min(calc(25 / c.$pcw * 100vw),12.5px);
+        }
     }
 }
+

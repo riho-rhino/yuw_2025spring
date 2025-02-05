@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.7",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "swiper": "^11.2.2"
   }
 }

@@ -2,7 +2,8 @@
 @use './_mixin' as m;
 @use './_common';
 @use './_mv';
-@use './_part';
 @use './_main';
 @use './_footer';
 @use './_index';
+@use './_pc';
+@use './_modules/_swiper';

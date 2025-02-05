@@ -10,6 +10,10 @@ body{
     font-family: montserrat, sans-serif;
     font-weight: 200;
     font-style: normal;
+    
+    &.noscroll{
+        overflow: hidden;
+    }
 }
 
 .pc{
@@ -45,4 +49,12 @@ body{
     font-family: zen-kaku-gothic-antique, sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.fadein{
+    opacity: 0;
+    transition: opacity .8s ease;
+    &.in{
+        opacity: 1;
+    }
 }

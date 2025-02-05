@@ -1,10 +1,45 @@
 <!-- <img src="<%= rootURL %>" alt=""> -->
 
-
+<div class="bg">
+        <div class="up">
+            <div class="color up_1">
+                <img src="<%= rootURL %>/assets/img/up_1.jpg" alt="">       
+            </div>
+            <div class="color up_2">
+                <img src="<%= rootURL %>/assets/img/up_2.jpg" alt="">       
+            </div>
+            <div class="color up_3">
+                <img src="<%= rootURL %>/assets/img/up_3.jpg" alt="">       
+            </div>
+        </div>
+        <div class="down">
+            <div class="color down_1">
+                <img src="<%= rootURL %>/assets/img/down_1.jpg" alt="">       
+            </div>
+            <div class="color down_2">
+                <img src="<%= rootURL %>/assets/img/down_2.jpg" alt="">       
+            </div>
+            <div class="color down_3">
+                <img src="<%= rootURL %>/assets/img/down_3.jpg" alt="">       
+            </div>
+        </div>
+</div>
+<div class="pc yuw_logo">
+    <img src="<%= rootURL %>/assets/img/yuw_logo.png" alt="">    
+</div>
 <div class="contents">
     <div class="contents-inner">
+        <div class="pc pc_txt" >
+            <img src="<%= rootURL %>/assets/img/pc_txt.png" alt="">       
+        </div>
+        <%- include('./_pcindex.ejs') %> 
         <div class="wrapper">
-            <div class="hamburger_menu"></div>
+            <div class="hamburger_menu sp">
+                <div class="hum_wrap">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
             <%- include('./_mv.ejs') %> 
             <main class="main">
                 <%- include('./_main.ejs') %> 
