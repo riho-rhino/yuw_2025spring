@@ -24,14 +24,14 @@
         animation: txt-right 10s infinite linear 1s both;
         font-size: calc(38 / c.$spw * 100vw);
         @include pc{
-            font-size: min(calc(55 / c.$pcw * 100vw),22.5px);
+            font-size: min(calc(55 / c.$pcw * 100vw),26.5px);
         }
     }
     &.yuw{
         animation: txt-left 10s infinite linear 1s both;
         font-size: calc(33 / c.$spw * 100vw);
         @include pc{
-            font-size: calc(29 / c.$pcw * 100vw);
+            font-size: min(calc(45 / c.$pcw * 100vw),22.5px);
         }
     }
 }
@@ -60,6 +60,12 @@
 }
 
 .allitem{
+    &:hover{
+        a{
+            border: solid 1px #D0E9F2;
+            background: #D0E9F2;
+        }
+    }
     a{
         position: relative;
         display: block;
@@ -67,11 +73,13 @@
         margin: calc(84.5 / c.$spw) * 100% auto 0;
         border-radius: 30px;
         border: solid 1px #000;
+        background: none;
         line-height: 1;
         padding: calc(38.94 / c.$spw) * 100% 0;
         font-size: calc(32.62 / c.$spw * 100vw);
         text-align: center;
         color: #000;
+        transition: all .3s ease;
         @include pc{
             width: calc(561.34 / c.$main) * 100%;
             border-radius: 60px;
@@ -113,30 +121,54 @@
     }
 }
 
+
 .link{
     font-size: calc(27 / c.$spw * 100vw);
     text-align: center;
-    text-decoration: underline wavy #FF56D2 1px;
-    text-underline-offset: 4px;
+    &:hover{
+        a{
+            .wave{
+                animation: waveAnime .5s ease forwards;
+            }
+        }
+    }
     @include pc{
         font-size: min(calc(33 / c.$pcw * 100vw),16.5px);
     }
     a{
         color: #000;
+        position: relative;
+        .wave{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            margin-bottom: -4px;
+        }
     }
 }
 .insta{
     margin-top: calc(90 / c.$spw) * 100%;
+    @include pc{
+        margin-top: calc(150 / c.$main) * 100%;
+    }
 }
 .official{
     margin-top: calc(51.68 / c.$spw) * 100%;
+    @include pc{
+        margin-top: calc(62 / c.$main) * 100%;
+    }
 }
+
 
 .footer_img{
     width: 100%;
     position: relative;
     line-height: 0;
     margin-top: calc(111.5 / c.$spw) * 100%;
+    @include pc{
+        margin-top: calc(172 / c.$main) * 100%;
+    }
     .footer_logo{
         line-height: 0;
         width: calc(121 / c.$spw) * 100%;

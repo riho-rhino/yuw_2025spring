@@ -19,7 +19,7 @@
         opacity: 1;
         transition: opacity .5s ease;
         @include pc{
-            font-size: calc(48 / c.$pcw * 100vw);
+            font-size: min(calc(48 / c.$pcw * 100vw),24px);
         }
         &.fadeout{
             opacity: 0;
@@ -37,28 +37,92 @@
         }
         p{
             a{
+                opacity: 1;
+                transition: opacity .3s ease;
+                cursor: pointer;
                 color: #000;
                 font-size: calc(32 / c.$spw * 100vw);
                 line-height: calc(55 / 32);
                 @include pc{
-                    font-size: calc(32 / c.$pcw * 100vw);
+                    font-size: min(calc(32 / c.$pcw * 100vw),16px);
+                }
+                &:hover{
+                    opacity: .5;
                 }
             }
         }
-        .shopnow{
-            padding-top: calc(35 / c.$spw) * 100%;
-            font-size: calc(33 / c.$spw * 100vw);
-            line-height: 1;
-            @include pc{
-                font-size: calc(33 / c.$pcw * 100vw);
-                padding-top: calc(35 / c.$main) * 100%;
+
+    }
+}
+
+.shopnow{
+    padding-top: calc(35 / c.$spw) * 100%;
+    font-size: calc(27 / c.$spw * 100vw);
+    line-height: 1;
+    @include pc{
+        font-size: min(calc(33 / c.$pcw * 100vw),16.2px);
+        padding-top: calc(35 / c.$main) * 100%;
+    }
+    &:hover{
+        .shop{
+            .wave{
+                animation: waveAnime .5s forwards;
             }
-            span{
-                display: block;
-                padding-bottom: calc(12 / c.$spw) * 100%;
-                text-decoration:underline wavy #FF56D2 1px;
-                text-underline-offset: 4px;
+        }
+        .arrow{
+            transform: translateX(8px);
+        }
+    }
+    a{
+        color: #000;
+        position: relative;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        gap: 5px;
+        .arrow{
+            display: block;
+            position: relative;
+            width: calc(29.27 / c.$spw) * 100%;
+            height: 0.7px;
+            background: #000;
+            transform: translateX(0);
+            transition: transform .5s ease;
+
+            &::before,
+            &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 7px;
+            height: 0.7px;
+            border-radius: 9999px;
+            background-color: #000;
+            transform-origin: 100% 50%;
             }
+
+            &::before {
+            transform: translateY(-50%) rotate(40deg);
+            }
+
+            &::after {
+            transform: translateY(-50%) rotate(-40deg);
+            }
+        }
+    }
+    
+    .shop{
+        display: block;
+        position: relative;
+        font-weight: 300;
+        .wave{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            margin-bottom: -4px;
+            clip-path: inset(0);
         }
     }
 }
@@ -74,18 +138,7 @@
         position: sticky;
         top: 0;
     }
-    .look1-1{
-        margin: 0 auto;
-        width: calc(528 / c.$spw) * 100%;
-    }   
-    .look1-2{
-        width: 100%;
-        z-index: 20;
-    }   
-    .look1-3{
-        width: 100%;
-        z-index: 30;
-    }   
+
 }
 
 
@@ -195,7 +248,7 @@
     line-height: 1;
     @include pc{
         display: inline;
-        font-size: calc(25 / c.$pcw * 100vw);
+        font-size: min(calc(25 / c.$pcw * 100vw),12.5px);
         
     }
 }

@@ -5,20 +5,24 @@
 body{
     &.start{
         .spyuw_logo{
-            animation: oplogo 1.5s ease forwards;
-        }
-        h1,h2{
-            opacity: 1;
+            animation: oplogo 2s ease forwards;
         }
         .hamburger_menu{
             opacity: 1;
         }
+        
     }
 }
 
 .header{
     width: 100%;
     position: relative;
+    &.start{
+        h1,h2{
+            opacity: 1;
+        }
+        
+    }
 
     h1{
         position: absolute;
@@ -29,10 +33,10 @@ body{
         line-height: 1;
         font-size: calc(40.14 / c.$spw * 100vw);
         opacity: 0;
-        transition:opacity 1s 1.5s ease-in;
+        transition:opacity 1s 1s ease;
         @include pc{
             font-size: min(calc(55 / c.$pcw * 100vw),22.5px);
-            transition:opacity 1s 1s ease-in;
+            transition:opacity 1s ease;
         }
     }
     h2{
@@ -44,19 +48,19 @@ body{
         line-height: 1;
         font-size: calc(24.08 / c.$spw * 100vw);
         opacity: 0;
-        transition:opacity 1s 1.5s ease-in;
+        transition:opacity 1s 1s ease;
         @include pc{
             font-size: min(calc(33 / c.$pcw * 100vw),16.5px);
-            transition:opacity 1s 1s ease-in;
+            transition:opacity 1s ease;
         }
     }
 
     .spyuw_logo{
         position: absolute;
-        width: calc(190 / c.$spw) * 100%;
+        width: calc(145 / c.$spw) * 100%;
         top: 0;
         left: 0;
-        margin: calc(50 / c.$spw) * 100% 0 0 calc(90 / c.$spw) * 100%;
+        margin: calc(64 / c.$spw) * 100% 0 0 calc(72 / c.$spw) * 100%;
         opacity: 0;
         @include pc{
             display: none;

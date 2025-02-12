@@ -2,39 +2,26 @@
 @use './_mixin' as *;
 @use './_common' as c;
 
-body{
-    &.start{
-        .bg{
-            .up_1{
-                animation: up_1 40s linear infinite;
-            }
-            .up_2{
-                animation: up_2 40s linear infinite;
-            }
-            .up_3{
-                animation: up_3 40s linear infinite;
-            }
-            .down_1{
-                animation: down_1 40s linear infinite;
-            }
-            .down_2{
-                animation: down_2 40s linear infinite;
-            }
-            .down_3{
-                animation: down_3 40s linear infinite;
-            }
-        }
-        .yuw_logo,
-        .pc-anchor_wrap,
-        .pc_txt{
-            opacity: 1;
+.contents{
+&.start{
+    .yuw_logo,
+    .pc-anchor_wrap,
+    .pc_txt{
+        opacity: 1;
+    }
+    .bg{
+        .up_1,
+        .down_1{
+            transition-delay: 1s;
+            clip-path: inset(0);
         }
     }
+}
 }
 
 .yuw_logo{
     opacity: 0;
-    transition: opacity 1s 2s ease-in;
+    transition: opacity 1s 1.5s ease;
     position: fixed;
     z-index: 40;
     top: 0;
@@ -73,6 +60,7 @@ body{
         .color{
             top: 0;
             clip-path: inset(0 0 0 100%);
+            transition: all 1s ease;
         }
 
     }
@@ -80,6 +68,7 @@ body{
         .color{
             bottom: 0;
             clip-path: inset(0 100% 0 0);
+            transition: all 1s ease;
         }
     }  
 }
@@ -98,79 +87,6 @@ body{
 }
 
 
-@keyframes up_1 {
-    0%{
-        clip-path: inset(0 0 0 100%);
-    }
-    15%,75%{
-        clip-path: inset(0 0 0 0); 
-    }
-    90%,100%{
-        clip-path: inset(0 100% 0 0);
-    }
-}
-@keyframes up_2 {
-    0%,25%{        
-        clip-path: inset(0 0 0 100%);
-    }
-    40%,75%{
-        clip-path: inset(0 0 0 0); 
-    }
-    90%,100%{
-        clip-path: inset(0 100% 0 0);
-    }
-}
-@keyframes up_3 {
-    0%,50%{
-        clip-path: inset(0 0 0 100%);
-    }
-    65%,75%{
-        clip-path: inset(0 0 0 0); 
-    }
-    90%,100%{
-        clip-path: inset(0 100% 0 0);
-    }
-}
-
-
-@keyframes down_1 {
-    0%{
-        clip-path: inset(0 100% 0 0);
-    }
-    15%,75%{
-        clip-path: inset(0 0 0 0); 
-    }
-    90%,100%{
-        clip-path: inset(0 0 0 100%);
-        
-    }
-}
-@keyframes down_2 {
-    0%,25%{        
-        clip-path: inset(0 100% 0 0);
-    }
-    40%,75%{
-        clip-path: inset(0 0 0 0); 
-    }
-    90%,100%{
-        clip-path: inset(0 0 0 100%);
-    }
-}
-@keyframes down_3 {
-    0%,50%{
-        clip-path: inset(0 100% 0 0);
-    }
-    65%,75%{
-        clip-path: inset(0 0 0 0); 
-    }
-    90%,100%{
-        clip-path: inset(0 0 0 100%);
-    }
-}
-
-
-
-
 .contents-inner{
     width: 100%;
     position: relative;
@@ -179,7 +95,7 @@ body{
 
 .pc_txt{
     opacity: 0;
-    transition: opacity 1s 2s ease-in;
+    transition: opacity 1s 1.5s ease;
     position: fixed;
     width: calc(41.01 / c.$pcw) * 100%;
     max-width: 20.5px;
@@ -207,7 +123,7 @@ body{
 
 .pc-anchor_wrap{
     opacity: 0;
-    transition: opacity 1s 2s ease-in;
+    transition: opacity 1s 1.5s ease;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -240,7 +156,7 @@ body{
                 clip-path: inset(0 100% 0 0);
                 transition: all .4s ease;
             }
-
+            
         }
     }
     .second_link{
@@ -248,12 +164,6 @@ body{
     }
 
 }
-
-
-
-
-
-
 
 .contents:has(#sec_1.on) .pc-anchor_wrap .first_line li:nth-child(1) .wave{
     clip-path: inset(0);
@@ -278,8 +188,13 @@ body{
     clip-path: inset(0 0 0 100%);
 }
 
-
 .contents:has(#sec_3.on) .pc-anchor_wrap .first_line li:nth-child(3) .wave{
+    clip-path: inset(0);
+}
+.contents:has(#sec_3.on) .bg .up_2{
+    clip-path: inset(0);
+}
+.contents:has(#sec_3.on) .bg .down_2{
     clip-path: inset(0);
 }
 
@@ -327,7 +242,15 @@ body{
     clip-path: inset(0 0 0 100%)!important; 
 }
 
+
+
 .contents:has(#sec_7.on) .pc-anchor_wrap .second_link li:nth-child(2) .wave{
+    clip-path: inset(0);
+}
+.contents:has(#sec_7.on) .bg .up_3{
+    clip-path: inset(0);
+}
+.contents:has(#sec_7.on) .bg .down_3{
     clip-path: inset(0);
 }
 
@@ -363,4 +286,109 @@ body{
 .contents:has(#sec_9.on) .pc-anchor_wrap .first_line li .wave{
     clip-path: inset(0 0 0 100%)!important; 
 }
+
+
+
+
+
+// &.start{
+//     .bg{
+//         .up_1{
+//             animation: up_1 40s linear infinite;
+//         }
+//         .up_2{
+//             animation: up_2 40s linear infinite;
+//         }
+//         .up_3{
+//             animation: up_3 40s linear infinite;
+//         }
+//         .down_1{
+//             animation: down_1 40s linear infinite;
+//         }
+//         .down_2{
+//             animation: down_2 40s linear infinite;
+//         }
+//         .down_3{
+//             animation: down_3 40s linear infinite;
+//         }
+//     }
+//     .yuw_logo,
+//     .pc-anchor_wrap,
+//     .pc_txt{
+//         opacity: 1;
+//     }
+// }
+
+
+// @keyframes up_1 {
+//     0%{
+//         clip-path: inset(0 0 0 100%);
+//     }
+//     15%,75%{
+//         clip-path: inset(0 0 0 0); 
+//     }
+//     90%,100%{
+//         clip-path: inset(0 100% 0 0);
+//     }
+// }
+// @keyframes up_2 {
+//     0%,25%{        
+//         clip-path: inset(0 0 0 100%);
+//     }
+//     40%,75%{
+//         clip-path: inset(0 0 0 0); 
+//     }
+//     90%,100%{
+//         clip-path: inset(0 100% 0 0);
+//     }
+// }
+// @keyframes up_3 {
+//     0%,50%{
+//         clip-path: inset(0 0 0 100%);
+//     }
+//     65%,75%{
+//         clip-path: inset(0 0 0 0); 
+//     }
+//     90%,100%{
+//         clip-path: inset(0 100% 0 0);
+//     }
+// }
+
+
+// @keyframes down_1 {
+//     0%{
+//         clip-path: inset(0 100% 0 0);
+//     }
+//     15%,75%{
+//         clip-path: inset(0 0 0 0); 
+//     }
+//     90%,100%{
+//         clip-path: inset(0 0 0 100%);
+        
+//     }
+// }
+// @keyframes down_2 {
+//     0%,25%{        
+//         clip-path: inset(0 100% 0 0);
+//     }
+//     40%,75%{
+//         clip-path: inset(0 0 0 0); 
+//     }
+//     90%,100%{
+//         clip-path: inset(0 0 0 100%);
+//     }
+// }
+// @keyframes down_3 {
+//     0%,50%{
+//         clip-path: inset(0 100% 0 0);
+//     }
+//     65%,75%{
+//         clip-path: inset(0 0 0 0); 
+//     }
+//     90%,100%{
+//         clip-path: inset(0 0 0 100%);
+//     }
+// }
+
+
 

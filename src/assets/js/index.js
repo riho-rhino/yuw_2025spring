@@ -2,10 +2,7 @@ import $ from "jquery"
 // swiper
 import Swiper from 'swiper';
 import { Autoplay} from 'swiper/modules';
-// GSAP
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+
 
 
 var $win = $(window);
@@ -25,8 +22,10 @@ function tick(time) {
 async function opning() {
     $body.addClass('noscroll');
     $body.addClass('start');
-    await tick(1000);
+    await tick(500);
     $body.removeClass('noscroll');
+    $('.header').addClass('start');
+    $('.contents').addClass('start');
     
 }
 
@@ -86,20 +85,20 @@ $(window).on('load', function () {
 });
 
 
-gsap.utils.toArray(".fadein").forEach((element) => {
-    gsap.to(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 70%",
-        toggleClass: {
-          targets: element,
-          className: "in",
-        },
-        once: true,
-      },
-    });
-  });
 
+$(window).on("scroll", function() {
+    var fadeInElements = $(".fadein");
+    var windowHeight = $(window).height();
+    var scrollTop = $(this).scrollTop();
+    
+    fadeInElements.each(function() {
+        var element = $(this);
+        var offset = element.offset().top;
+        if (scrollTop + windowHeight * 0.7 > offset && !element.hasClass("in")) {
+            element.addClass("in"); 
+        }
+    });
+});
 
   function styleOn() {
       $('.sec').each(function () {
