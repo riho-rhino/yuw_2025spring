@@ -74,7 +74,7 @@ body{
     0%{
         opacity: 0;
     }
-    40%,80%{
+    40%,70%{
         opacity: 1;
     }
     100%{
@@ -105,18 +105,21 @@ body{
     }
     .ja_lead{
         margin-top: calc(41 / c.$spw) * 100%;
-        line-height: calc(40 / 27);
+        line-height: calc(47 / 27);
         font-size: calc(27 / c.$spw * 100vw);
+        letter-spacing: 0.05em;
         @include pc{
             font-size: min(calc(27 / c.$pcw * 100vw),13.5px);
         }
     }
     .en_lead{
-        font-size: calc(20.91 / c.$spw * 100vw);
-        line-height: calc(35.1 / 26.57);
+        font-size: calc(26 / c.$spw * 100vw);
+        line-height: calc(40 / 26);
         margin-top: calc(26.57 / c.$spw) * 100%;
         @include pc{
+            margin-top: calc(65.9 / c.$main) * 100%;
             font-size: min(calc(25 / c.$pcw * 100vw),12.5px);
+            line-height: calc(42 / 25);
         }
     }
 }

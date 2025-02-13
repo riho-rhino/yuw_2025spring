@@ -96,7 +96,7 @@
             top: 50%;
             right: 0;
             width: 7px;
-            height: 0.7px;
+            height: 0.5px;
             border-radius: 9999px;
             background-color: #000;
             transform-origin: 100% 50%;
@@ -132,7 +132,6 @@
     margin-top: calc(160.5 / c.$spw) * 100%;
     @include pc{
         margin-top: calc(180.5 / c.$main) * 100%;
-
     }
     .look_ph{
         position: sticky;

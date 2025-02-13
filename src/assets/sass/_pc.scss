@@ -27,7 +27,7 @@
     top: 0;
     left: 0;
     width: calc(195 / c.$pcw) * 100%;
-    max-width: 92.5px;
+    max-width: 100px;
     margin: calc(104 / c.$pcw) * 100% 0 0 calc(107 / c.$pcw) * 100%;
 }
 
@@ -47,14 +47,20 @@
     .down{
         position: relative;
         width: 100%;
-        height: 50%;
+        height: 50vh;
         overflow: hidden;
         .color{
             width: 100%;
             line-height: 0;
             position: absolute;
-            left: 0
+            left: 0;
+            height: 100%;
+            img{
+                object-fit: cover;
+                height: 100%;
+            }
         }
+        
     }
     .up{
         .color{
@@ -97,8 +103,8 @@
     opacity: 0;
     transition: opacity 1s 1.5s ease;
     position: fixed;
-    width: calc(41.01 / c.$pcw) * 100%;
-    max-width: 20.5px;
+    width: calc(30.56 / c.$pcw) * 100%;
+    max-width: 15.5px;
     top: 50%;
     right: 0;
     transform: translateY(-50%);

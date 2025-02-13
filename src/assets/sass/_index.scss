@@ -101,9 +101,16 @@
 
                 a{
                     color: #000;
+                    .anchor_ph{
+                        line-height: 0;
+                    }
                 }
                 img{
                     line-height: 0;
+                }
+
+                .anchor_num{
+                    margin-top: 12px;
                 }
             }
         }

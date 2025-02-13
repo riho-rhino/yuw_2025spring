@@ -22,7 +22,7 @@ function tick(time) {
 async function opning() {
     $body.addClass('noscroll');
     $body.addClass('start');
-    await tick(500);
+    await tick(1000);
     $body.removeClass('noscroll');
     $('.header').addClass('start');
     $('.contents').addClass('start');
@@ -36,6 +36,7 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 1.6,
     spaceBetween: 5,
     loop: true,
+    speed: 650,
     autoplay:{
         delay: 2500,
     },
@@ -125,11 +126,7 @@ $('.hamburger_menu').on('click', function () {
     $(this).toggleClass('click');
     $('.sp-anchor_wrap').toggleClass('show');
 });
-// $('.hamburger_menu .click').on('click', function () {
-//     $body.removeClass('noscroll');
-//     $(this).removeClass('click');
-//     $('.sp-anchor_wrap').removeClass('show');
-// });
+
 $('.anchor_link a').on('click', function () {
     $body.removeClass('noscroll');
     $('.hamburger_menu').removeClass('click');
